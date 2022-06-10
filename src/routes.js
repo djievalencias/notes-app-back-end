@@ -1,6 +1,13 @@
-// File ini memuat kode konfigurasi routing server seperti menentukan path, method, dan handler yang digunakan
+/* File ini memuat kode konfigurasi routing server seperti
+menentukan path, method, dan handler yang digunakan */
 
-const { addNoteHandler, getAllNotesHandler, getNoteByIdHandler, editNoteByIdHandler, deleteNoteByIdHandler } = require('./handler');
+const {
+  addNoteHandler,
+  getAllNotesHandler,
+  getNoteByIdHandler,
+  editNoteByIdHandler,
+  deleteNoteByIdHandler,
+} = require('./handler');
 
 const routes = [
   {

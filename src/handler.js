@@ -1,4 +1,5 @@
-// FIle ini memuat seluruh fungsi-fungsi handler yang digunakan pada berkas routes
+/* File ini memuat seluruh fungsi-fungsi
+handler yang digunakan pada berkas routes */
 
 const { nanoid } = require('nanoid');
 const notes = require('./notes');
@@ -75,7 +76,7 @@ const editNoteByIdHandler = (request, h) => {
 
   if (index !== -1) {
     notes[index] = {
-      ...notes[index], title, tags, body, updatedAt
+      ...notes[index], title, tags, body, updatedAt,
     };
 
     const response = h.response({
@@ -117,4 +118,10 @@ const deleteNoteByIdHandler = (request, h) => {
   return response;
 };
 
-module.exports = { addNoteHandler, getAllNotesHandler, getNoteByIdHandler, editNoteByIdHandler, deleteNoteByIdHandler };
+module.exports = {
+  addNoteHandler,
+  getAllNotesHandler,
+  getNoteByIdHandler,
+  editNoteByIdHandler,
+  deleteNoteByIdHandler,
+};
